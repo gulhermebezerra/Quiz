@@ -4,7 +4,14 @@
              x:Class="AppMeuQuiz.Views.Questao2View">
     <ContentPage.Content>
         <StackLayout>
-            <Label Text="Welcome to Xamarin Forms! 2" />
+            <StackLayout Padding="10">
+                <Label Text="O que achou desse produto 2?" Font="35" />
+                <Button Text="Questão 1" Clicked="Button_Clicked" CommandParameter="1"/>
+                <Button Text="Questão 2" Clicked="Button_Clicked" CommandParameter="2"/>
+                <Button Text="Questão 3" Clicked="Button_Clicked" CommandParameter="3"/>
+                <Button Text="Questão 4" Clicked="Button_Clicked" CommandParameter="4"/>
+                <Button Text="Questão 5" Clicked="Button_Clicked" CommandParameter="5"/>
+            </StackLayout>
         </StackLayout>
     </ContentPage.Content>
 </ContentPage>
