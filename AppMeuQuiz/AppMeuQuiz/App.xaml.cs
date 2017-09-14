@@ -11,9 +11,9 @@ namespace AppMeuQuiz
     {
         public App()
         {
-            InitializeComponent();
-
+            InitializeComponent();           
             MainPage = new NavigationPage(new AppMeuQuiz.MainPage());
+            NavigationPage.SetHasNavigationBar(this, false);
         }
 
         protected override void OnStart()

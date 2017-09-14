@@ -1,0 +1,38 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="AppMeuQuiz.Views.QuestaoView">
+    <ContentPage.Content>
+        <StackLayout Padding="10">
+            <Grid ColumnSpacing="20" RowSpacing="10">
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="*"/>
+                    <ColumnDefinition Width="*"/>
+                </Grid.ColumnDefinitions>
+                <Image Source="bioLogo2014.png"  
+                       Grid.Column="0" VerticalOptions="Start" HorizontalOptions="Start"/>
+                <Image Source="quiz_banner.png"  WidthRequest="200" HeightRequest="200" 
+                       Grid.Column="1" VerticalOptions="End"  HorizontalOptions="End"/>
+            </Grid>
+            <StackLayout>
+                <Label FontSize="32" HorizontalOptions="Center" VerticalOptions="Center">ESCOLHA O EQUIPAMENTO</Label>
+            </StackLayout>
+            <Grid ColumnSpacing="20" RowSpacing="20" Padding="10">
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="*"/>
+                    <ColumnDefinition Width="*"/>
+                </Grid.ColumnDefinitions>
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="100"/>
+                    <RowDefinition Height="100"/>
+                </Grid.RowDefinitions>
+
+                <Button Grid.Column="0" Grid.Row="0" Text="Modelo 1"/>
+                <Button Grid.Column="1" Grid.Row="0" Text="Modelo 2"/>
+                <Button Grid.Column="0" Grid.Row="1" Text="Modelo 3"/>
+                <Button Grid.Column="1" Grid.Row="1" Text="Modelo 4"/>
+                
+            </Grid>
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>

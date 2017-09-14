@@ -2,28 +2,21 @@
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              xmlns:local="clr-namespace:AppMeuQuiz"
-             x:Class="AppMeuQuiz.MainPage">
+             x:Class="AppMeuQuiz.MainPage" >
 
     <ContentPage.Content>
-        <Grid Padding="10" ColumnSpacing="10" RowSpacing="10">
-            <Grid.RowDefinitions>
-                <RowDefinition Height="*"/>
-                <RowDefinition Height="*"/>
-            </Grid.RowDefinitions>
-            <Grid.ColumnDefinitions>
-                <ColumnDefinition Width="*"/>
-                <ColumnDefinition Width="*"/>
-            </Grid.ColumnDefinitions>
-
-            <Button Grid.Row="0" Text="Produto 1" Grid.Column="0" Clicked="Button_Clicked" CommandParameter="1"/>
-            <Button Grid.Row="0" Text="Produto 2" Grid.Column="1" Clicked="Button_Clicked" CommandParameter="2"/>
-
-            <Button Grid.Row="1" Text="Produto 3" Grid.Column="0" Clicked="Button_Clicked" CommandParameter="3"/>
-            <Button Grid.Row="1" Text="Produto 4" Grid.Column="1" Clicked="Button_Clicked" CommandParameter="4"/>
-            
-
-
-        </Grid>
+        <StackLayout Padding="10">
+            <StackLayout.GestureRecognizers>
+                <TapGestureRecognizer
+                   Command="{Binding TelaQuestoesCMD}"
+                   />
+            </StackLayout.GestureRecognizers>
+            <Image Source="quiz_tela_inicio.png" 
+                   WidthRequest="500"
+                   HeightRequest="500"
+                   HorizontalOptions="CenterAndExpand" 
+                   VerticalOptions="CenterAndExpand"/>
+        </StackLayout>
     </ContentPage.Content>
 
 </ContentPage>

@@ -10,9 +10,9 @@ using Xamarin.Forms.Xaml;
 namespace AppMeuQuiz.Views
 {
     [XamlCompilation(XamlCompilationOptions.Compile)]
-    public partial class ModalErrou : ContentPage
+    public partial class QuestaoView : ContentPage
     {
-        public ModalErrou()
+        public QuestaoView()
         {
             InitializeComponent();
         }
