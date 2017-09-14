@@ -4,15 +4,17 @@
              x:Class="AppMeuQuiz.Views.QuestaoView">
     <ContentPage.Content>
         <StackLayout Padding="10">
-            <Grid ColumnSpacing="20" RowSpacing="10">
+            <Grid>
                 <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="200"/>
                     <ColumnDefinition Width="*"/>
-                    <ColumnDefinition Width="*"/>
+                    <ColumnDefinition Width="200"/>
                 </Grid.ColumnDefinitions>
                 <Image Source="bioLogo2014.png"  
-                       Grid.Column="0" VerticalOptions="Start" HorizontalOptions="Start"/>
+                       Grid.Column="0"  WidthRequest="500" HeightRequest="500" 
+                       VerticalOptions="Start" HorizontalOptions="End"/>
                 <Image Source="quiz_banner.png"  WidthRequest="200" HeightRequest="200" 
-                       Grid.Column="1" VerticalOptions="End"  HorizontalOptions="End"/>
+                       Grid.Column="2" VerticalOptions="End"  HorizontalOptions="End"/>
             </Grid>
             <StackLayout>
                 <Label FontSize="32" HorizontalOptions="Center" VerticalOptions="Center">ESCOLHA O EQUIPAMENTO</Label>
