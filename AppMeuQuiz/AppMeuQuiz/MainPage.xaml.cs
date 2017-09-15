@@ -13,7 +13,8 @@ namespace AppMeuQuiz
         {
             InitializeComponent();
             this.BindingContext = new ViewModel.MeuQuizVM();
-            
+            NavigationPage.SetHasNavigationBar(this, false);
+
         }
       
     }

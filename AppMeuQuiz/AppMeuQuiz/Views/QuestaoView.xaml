@@ -3,7 +3,7 @@
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="AppMeuQuiz.Views.QuestaoView">
     <ContentPage.Content>
-        <StackLayout Padding="10">
+        <StackLayout Padding="10" HorizontalOptions="StartAndExpand">
             <Grid>
                 <Grid.ColumnDefinitions>
                     <ColumnDefinition Width="200"/>
@@ -29,10 +29,10 @@
                     <RowDefinition Height="100"/>
                 </Grid.RowDefinitions>
 
-                <Button Grid.Column="0" Grid.Row="0" Text="Modelo 1"/>
-                <Button Grid.Column="1" Grid.Row="0" Text="Modelo 2"/>
-                <Button Grid.Column="0" Grid.Row="1" Text="Modelo 3"/>
-                <Button Grid.Column="1" Grid.Row="1" Text="Modelo 4"/>
+                <Button Grid.Column="0" Grid.Row="0" Text="Modelo 1" Command="{Binding TelaProdutoQuestaoCMD}" CommandParameter="Filmarray"/>
+                <Button Grid.Column="1" Grid.Row="0" Text="Modelo 2" Command="{Binding TelaProdutoQuestaoCMD}" CommandParameter="Vidas"/>
+                <Button Grid.Column="0" Grid.Row="1" Text="Modelo 3" Command="{Binding TelaProdutoQuestaoCMD}" CommandParameter="Virtuo"/>
+                <Button Grid.Column="1" Grid.Row="1" Text="Modelo 4" Command="{Binding TelaProdutoQuestaoCMD}" CommandParameter="Rio"/>
                 
             </Grid>
         </StackLayout>

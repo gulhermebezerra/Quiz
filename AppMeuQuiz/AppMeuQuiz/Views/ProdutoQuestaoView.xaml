@@ -1,0 +1,32 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="AppMeuQuiz.Views.ProdutoQuestaoView" BackgroundImage="layout_padrao.jpg">
+    <ContentPage.Content>
+        <StackLayout Padding="70">
+            <Grid>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="*"/>
+                    <ColumnDefinition Width="200"/>
+                </Grid.ColumnDefinitions>
+
+                <StackLayout  Orientation="Vertical">
+                    <StackLayout Orientation="Horizontal">
+                        <Frame OutlineColor="Black">
+                            <Label>A</Label>
+                        </Frame>
+                        <Frame OutlineColor="Black">
+                            <Label>Resposta</Label>
+                        </Frame>
+                    </StackLayout>
+                </StackLayout>
+                <StackLayout Grid.Column="1">
+
+                    <Image Source="bioLogo2014.png" WidthRequest="200" HeightRequest="200" VerticalOptions="End" HorizontalOptions="End"/>
+                    <Image Source="botaoConfirmar.png" WidthRequest="200" HeightRequest="200" VerticalOptions="End" HorizontalOptions="End"/>
+
+                </StackLayout>
+            </Grid>
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>

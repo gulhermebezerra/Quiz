@@ -21,6 +21,7 @@ namespace AppMeuQuiz.ViewModel.Base
         protected async void NavegarPara(Page Tela)
         {
             await Xamarin.Forms.Application.Current.MainPage.Navigation.PushAsync(Tela, true);
+            NavigationPage.SetHasNavigationBar(Tela, false);
         }
 
         public async Task ShowMessage(string message, string title, string buttonText, Action afterHideCallback)

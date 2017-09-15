@@ -12,10 +12,16 @@ namespace AppMeuQuiz.ViewModel
 
 
         public Command TelaQuestoesCMD { get; set; }
+        public Command TelaProdutoQuestaoCMD { get; set; }
+
 
         public MeuQuizVM()
         {
             this.TelaQuestoesCMD = new Command(() => this.NavegarPara(new Views.QuestaoView()));
+            this.TelaProdutoQuestaoCMD = new Command(
+                (object produto_) =>
+                this.NavegarPara(new Views.ProdutoQuestaoView((Produto)Enum.Parse(typeof(Produto), produto_.ToString()))));
         }
+
     }
 }

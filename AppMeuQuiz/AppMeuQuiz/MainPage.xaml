@@ -2,20 +2,17 @@
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              xmlns:local="clr-namespace:AppMeuQuiz"
-             x:Class="AppMeuQuiz.MainPage" >
-
+             x:Class="AppMeuQuiz.MainPage" Padding="0">
     <ContentPage.Content>
-        <StackLayout Padding="10">
+        <StackLayout Padding="0">
             <StackLayout.GestureRecognizers>
                 <TapGestureRecognizer
                    Command="{Binding TelaQuestoesCMD}"
                    />
             </StackLayout.GestureRecognizers>
-            <Image Source="quiz_tela_inicio.png" 
-                   WidthRequest="500"
-                   HeightRequest="500"
-                   HorizontalOptions="CenterAndExpand" 
-                   VerticalOptions="CenterAndExpand"/>
+            <Image Source="quiz_tela_inicio.png"                                       
+                   HorizontalOptions="Fill" 
+                   VerticalOptions="Fill"/>
         </StackLayout>
     </ContentPage.Content>
 

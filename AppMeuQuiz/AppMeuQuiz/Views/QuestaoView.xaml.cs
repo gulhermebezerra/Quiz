@@ -15,6 +15,7 @@ namespace AppMeuQuiz.Views
         public QuestaoView()
         {
             InitializeComponent();
+            this.BindingContext = new ViewModel.MeuQuizVM();
         }
     }
 }

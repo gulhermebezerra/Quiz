@@ -12,8 +12,7 @@ namespace AppMeuQuiz
         public App()
         {
             InitializeComponent();           
-            MainPage = new NavigationPage(new AppMeuQuiz.MainPage());
-            NavigationPage.SetHasNavigationBar(this, false);
+            MainPage = new NavigationPage(new AppMeuQuiz.MainPage());            
         }
 
         protected override void OnStart()
@@ -30,5 +29,16 @@ namespace AppMeuQuiz
         {
             // Handle when your app resumes
         }
+
+
+    }
+
+    public enum Produto
+    {
+        Filmarray,
+        Vidas,
+        Virtuo,
+        Rio
+
     }
 }
