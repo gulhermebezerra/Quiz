@@ -13,17 +13,19 @@
                 <StackLayout  Orientation="Vertical">
                     <StackLayout Orientation="Horizontal">
                         <Frame OutlineColor="Black">
-                            <Label>A</Label>
+                            <Label BackgroundColor="WhiteSmoke">A</Label>
                         </Frame>
-                        <Frame OutlineColor="Black">
+                        <Frame BackgroundColor="WhiteSmoke" OutlineColor="Black">
                             <Label>Resposta</Label>
                         </Frame>
                     </StackLayout>
                 </StackLayout>
                 <StackLayout Grid.Column="1">
 
-                    <Image Source="bioLogo2014.png" WidthRequest="200" HeightRequest="200" VerticalOptions="End" HorizontalOptions="End"/>
-                    <Image Source="botaoConfirmar.png" WidthRequest="200" HeightRequest="200" VerticalOptions="End" HorizontalOptions="End"/>
+                    <Image Source="bioLogo2014.png" WidthRequest="200" HeightRequest="200" 
+                           VerticalOptions="End"/>
+                    <Image Source="botaoConfirmar.png" WidthRequest="200" 
+                           HeightRequest="200" HorizontalOptions="StartAndExpand"/>
 
                 </StackLayout>
             </Grid>
