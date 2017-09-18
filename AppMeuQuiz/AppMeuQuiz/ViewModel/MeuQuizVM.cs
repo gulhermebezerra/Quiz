@@ -90,10 +90,10 @@ namespace AppMeuQuiz.ViewModel
             LogoQuestao = produto_ == Produto.Real ? "BotaologoReal.png" : LogoQuestao;
 
             this.ProdutoC = produto_ == Produto.Vidas;
-            LogoQuestao = produto_ == Produto.Real ? "BotaologoVidas.png" : LogoQuestao;
+            LogoQuestao = produto_ == Produto.Vidas ? "BotaologoVidas.png" : LogoQuestao;
 
             this.ProdutoD = produto_ == Produto.Virtuo;
-            LogoQuestao = produto_ == Produto.Real ? " BotaologoVirtuo.png" : LogoQuestao;
+            LogoQuestao = produto_ == Produto.Virtuo ? "BotaologoVirtuo.png" : LogoQuestao;
 
             this.produto_ = produto_;
 

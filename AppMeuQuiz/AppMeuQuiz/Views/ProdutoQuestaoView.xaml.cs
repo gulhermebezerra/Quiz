@@ -63,11 +63,6 @@ namespace AppMeuQuiz.Views
             }
         }
 
-        private void Q1_Unfocused(object sender, FocusEventArgs e)
-        {
-
-        }
-
         private void VidasResposta(object sender, EventArgs e)
         {
             switch (((Button)sender).CommandParameter.ToString())
@@ -98,6 +93,64 @@ namespace AppMeuQuiz.Views
                     this.FindByName<Button>("VQ1").BackgroundColor = Color.White;
                     this.FindByName<Button>("VQ2").BackgroundColor = Color.White;
                     this.FindByName<Button>("VQ3").BackgroundColor = Color.White;
+                    ((ViewModel.MeuQuizVM)this.BindingContext).EstaCerto = false;
+                    break;
+                default:
+                    break;
+            }
+        }
+
+        private void RealResposta(object sender, EventArgs e)
+        {
+            switch (((Button)sender).CommandParameter.ToString())
+            {
+                case "RQ1":
+                    ((Button)sender).BackgroundColor = Color.LightGreen;
+                    ((ViewModel.MeuQuizVM)this.BindingContext).EstaCerto = true;
+                    this.FindByName<Button>("RQ2").BackgroundColor = Color.White;
+
+                    break;
+                case "RQ2":
+                    ((Button)sender).BackgroundColor = Color.LightGreen;
+                    ((ViewModel.MeuQuizVM)this.BindingContext).EstaCerto = false;
+                    this.FindByName<Button>("RQ1").BackgroundColor = Color.White;
+
+                    break;
+                default:
+                    break;
+            }
+        }
+
+        private void VirtuoResposta(object sender, EventArgs e)
+        {
+            switch (((Button)sender).CommandParameter.ToString())
+            {
+                case "VVQ1":
+                    ((Button)sender).BackgroundColor = Color.LightGreen;
+                    ((ViewModel.MeuQuizVM)this.BindingContext).EstaCerto = false;
+                    this.FindByName<Button>("VVQ2").BackgroundColor = Color.White;
+                    this.FindByName<Button>("VVQ3").BackgroundColor = Color.White;
+                    this.FindByName<Button>("VVQ4").BackgroundColor = Color.White;
+                    break;
+                case "VVQ2":
+                    ((Button)sender).BackgroundColor = Color.LightGreen;
+                    ((ViewModel.MeuQuizVM)this.BindingContext).EstaCerto = true;
+                    this.FindByName<Button>("VVQ1").BackgroundColor = Color.White;
+                    this.FindByName<Button>("VVQ3").BackgroundColor = Color.White;
+                    this.FindByName<Button>("VVQ4").BackgroundColor = Color.White;
+                    break;
+                case "VVQ3":
+                    ((Button)sender).BackgroundColor = Color.LightGreen;
+                    this.FindByName<Button>("VVQ1").BackgroundColor = Color.White;
+                    this.FindByName<Button>("VVQ2").BackgroundColor = Color.White;
+                    this.FindByName<Button>("VVQ4").BackgroundColor = Color.White;
+                    ((ViewModel.MeuQuizVM)this.BindingContext).EstaCerto = false;
+                    break;
+                case "VVQ4":
+                    ((Button)sender).BackgroundColor = Color.LightGreen;
+                    this.FindByName<Button>("VVQ1").BackgroundColor = Color.White;
+                    this.FindByName<Button>("VVQ2").BackgroundColor = Color.White;
+                    this.FindByName<Button>("VVQ3").BackgroundColor = Color.White;
                     ((ViewModel.MeuQuizVM)this.BindingContext).EstaCerto = false;
                     break;
                 default:
