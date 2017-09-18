@@ -11,11 +11,17 @@ namespace AppMeuQuiz.Views
 {
     [XamlCompilation(XamlCompilationOptions.Compile)]
     public partial class QuestaoView : ContentPage
-    {
+    {        
+
         public QuestaoView()
         {
             InitializeComponent();
             this.BindingContext = new ViewModel.MeuQuizVM();
+        }
+
+        public QuestaoView(Produto produto_)
+        {
+            this.BindingContext = new ViewModel.MeuQuizVM(produto_);
         }
     }
 }

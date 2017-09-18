@@ -41,19 +41,19 @@
                 
                 <Image Grid.Column="1" Grid.Row="0" Source="BotaologoReal.png">
                     <Image.GestureRecognizers>
-                        <TapGestureRecognizer Command="{Binding TelaProdutoQuestaoCMD}" CommandParameter="Vidas"/>
+                        <TapGestureRecognizer Command="{Binding TelaProdutoQuestaoCMD}" CommandParameter="Real"/>
                     </Image.GestureRecognizers>
                 </Image>
                 
                 <Image Grid.Column="0" Grid.Row="1" Source="BotaologoVidas.png">
                     <Image.GestureRecognizers>
-                        <TapGestureRecognizer Command="{Binding TelaProdutoQuestaoCMD}" CommandParameter="Virtuo"/>
+                        <TapGestureRecognizer Command="{Binding TelaProdutoQuestaoCMD}" CommandParameter="Vidas"/>
                     </Image.GestureRecognizers>
                 </Image>
-                
+
                 <Image Grid.Column="1" Grid.Row="1" Source="BotaologoVirtuo.png">
                     <Image.GestureRecognizers>
-                        <TapGestureRecognizer Command="{Binding TelaProdutoQuestaoCMD}" CommandParameter="Rio"/>
+                        <TapGestureRecognizer Command="{Binding TelaProdutoQuestaoCMD}" CommandParameter="Virtuo"/>
                     </Image.GestureRecognizers>
                 </Image>
                 

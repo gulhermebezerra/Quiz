@@ -20,17 +20,18 @@ namespace AppMeuQuiz.ViewModel
         }
 
 
-        public Command JogarNovamente { get; set; }
+        public Command JogarNovamenteCMD { get; set; }
 
 
-        public ConfirmarVM()
+        private void Selecionar(Produto p)
         {
-            this.JogarNovamente = new Command(() => Application.Current.MainPage.SendBackButtonPressed());
+            this.NavegarPara(new Views.QuestaoView());
         }
 
-        public ConfirmarVM(bool value)
+        public ConfirmarVM(bool value, Produto p)
         {
             Imagem = value ? "Acerto.jpg" : "Erro.jpg";
+            this.JogarNovamenteCMD = new Command(() => Selecionar(p));
         }
     }
 }

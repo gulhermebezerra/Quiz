@@ -18,61 +18,46 @@
                         </Grid.RowDefinitions>
 
                         <StackLayout Grid.Row="0" Padding="40">
-                            <Label FontSize="26" Text="{Binding Path=Quiz.Questao}"/>
+                            <Label FontSize="26" IsVisible="{Binding ProdutoA}" FontAttributes="Bold" Text="1.Quais os painéis existentes para o Sistema FilmArray?"/>
+                            <Label FontSize="26" IsVisible="{Binding ProdutoB}" Text="1.Qual o nome do único teste automatizado aprovado pelo FDA e ANVISA para auxiliar os médicos no uso racional de antibióticos nas infecções do trato respiratório inferior (ITRI) e sepse? "/>
                         </StackLayout>
 
 
-                        <StackLayout Padding="20" Grid.Row="1" IsVisible="{Binding ProdutoA}" Orientation="Vertical" Spacing="10" >
+                        <StackLayout Padding="20" Grid.Row="1"  Orientation="Vertical" Spacing="10" >
 
-                            <Label FontSize="26" FontAttributes="Bold" Text="1.Quais os painéis existentes para o Sistema FilmArray?"/>
+                            <Button x:Name="Q1" 
+                                    CommandParameter="Q1" Clicked="Button_Clicked" 
+                                    BackgroundColor="White" FontSize="20" Text="a. (Respiratório (RP); Identificação de Microrganismo em Hemocultura (BCID); Gastrointestinal (GI) e Meningite / Encefalite (ME) "/>
 
-                            <Button x:Name="Q1" CommandParameter="Q1" Clicked="Button_Clicked" BackgroundColor="White" FontSize="20" Text="a. (Respiratório (RP); Identificação de Microrganismo em Hemocultura (BCID); Gastrointestinal (GI) e Meningite / Encefalite (ME) ">
-                                <Button.GestureRecognizers>
-                                    <TapGestureRecognizer
-                                        Command="{Binding Path=SelecionarQuestaoCMD}"   
-                                        CommandParameter="True"
-                                       />
-                                </Button.GestureRecognizers>
-                            </Button>
+                            <Button x:Name="Q2" 
+                                    CommandParameter="Q2"  Clicked="Button_Clicked" 
+                                    BackgroundColor="White" FontSize="20" Text="b. Respiratório (RP) e Identificação de Microrganismo em Hemocultura (BCID)"/>
 
-                            <Button x:Name="Q2" CommandParameter="Q2"  Clicked="Button_Clicked" BackgroundColor="White" FontSize="20" Text="b. Respiratório (RP) e Identificação de Microrganismo em Hemocultura (BCID)">
-                                <Button.GestureRecognizers>
-                                    <TapGestureRecognizer Command="{Binding Path=SelecionarQuestaoCMD}" CommandParameter="False" Tapped="TapGestureRecognizer_Tapped" />
-                                </Button.GestureRecognizers>
-                            </Button>
+                            <Button x:Name="Q3" 
+                                    CommandParameter="Q3"  Clicked="Button_Clicked" 
+                                    BackgroundColor="White"  FontSize="20" Text="c. Respiratório (RP) e Gastrointestinal (GI)"/>
 
-                            <Button x:Name="Q3" CommandParameter="Q3"  Clicked="Button_Clicked" BackgroundColor="White"  FontSize="20" Text="c. Respiratório (RP) e Gastrointestinal (GI)">
-                                <Button.GestureRecognizers>
-                                    <TapGestureRecognizer Command="{Binding Path=SelecionarQuestaoCMD}" CommandParameter="False" Tapped="TapGestureRecognizer_Tapped" />
-                                </Button.GestureRecognizers>
-                            </Button>
-
-                            <Button x:Name="Q4" CommandParameter="Q4"  Clicked="Button_Clicked" BackgroundColor="White" FontSize="20" Text="d. Gastrointestinal (GI) e Meningite / Encefalite (ME)" HorizontalOptions="FillAndExpand">
-                                <Button.GestureRecognizers>
-                                    <TapGestureRecognizer Command="{Binding Path=SelecionarQuestaoCMD}" CommandParameter="False" Tapped="TapGestureRecognizer_Tapped" />
-                                </Button.GestureRecognizers>
-                            </Button>
+                            <Button x:Name="Q4" 
+                                    CommandParameter="Q4"  Clicked="Button_Clicked" 
+                                    BackgroundColor="White" FontSize="20" Text="d. Gastrointestinal (GI) e Meningite / Encefalite (ME)" HorizontalOptions="FillAndExpand"/>
 
                         </StackLayout>
 
-                        <!--<StackLayout Padding="20" Grid.Row="1" IsVisible="{Binding ProdutoB}">
-                            <Label Text="VIDAS"/>
-                            
-                            <Label Text="1.Qual o nome do único teste automatizado aprovado pelo FDA e ANVISA para auxiliar os médicos no uso racional de antibióticos nas infecções do trato respiratório inferior (ITRI) e sepse? "/>
-                            
-                                <Label Text="VIDAS® B • R • A • H • M • S PCT ™"/>
-                                <Label Text="VIDAS® TOTAL 25 – OH VITAMINE D"/>
-                                <Label Text="VIDAS®  HCG"/>
-                                <Label Text="VIDAS® MYOGLOBINA"/>
+                        <StackLayout Padding="20" Grid.Row="1" IsVisible="{Binding ProdutoB}" Orientation="Vertical" Spacing="10" >
+                            <Label Text="BotaologoReal"/>
+                            <Button x:Name="VQ1" Clicked="VidasResposta" BackgroundColor="White" FontSize="20" Text="VIDAS® B • R • A • H • M • S PCT ™"/>
+                            <Button x:Name="VQ2" Clicked="VidasResposta" BackgroundColor="White" FontSize="20" Text="VIDAS® TOTAL 25 – OH VITAMINE D"/>
+                            <Button x:Name="VQ3" Clicked="VidasResposta" BackgroundColor="White" FontSize="20" Text="VIDAS®  HCG"/>
+                            <Button x:Name="VQ4" Clicked="VidasResposta" BackgroundColor="White" FontSize="20" Text="VIDAS® MYOGLOBINA"/>
                         </StackLayout>
 
-                        <StackLayout Padding="20" Grid.Row="1" IsVisible="{Binding ProdutoC}">
-
+                        <StackLayout Padding="20" Grid.Row="1" IsVisible="{Binding ProdutoC}" Orientation="Vertical" Spacing="10" >
+                            <Label Text="BotaologoVidas"/>
                         </StackLayout>
 
-                        <StackLayout Padding="20" Grid.Row="1" IsVisible="{Binding ProdutoD}">
-
-                        </StackLayout>-->
+                        <StackLayout Padding="20" Grid.Row="1" IsVisible="{Binding ProdutoD}" Orientation="Vertical" Spacing="10" >
+                            <Label Text="BotaologoVirtuo"/>
+                        </StackLayout>
 
 
                     </Grid>
@@ -88,7 +73,7 @@
                         </Grid.RowDefinitions>
 
 
-                        <Image Source="LogoFilmArrayOnly.png" Grid.Row="0" 
+                        <Image Source="{Binding Path=LogoQuestao}" Grid.Row="0" 
                                WidthRequest="200" HeightRequest="200"/>
 
                         <Image Source="bioLogo2014.png" Grid.Row="1" WidthRequest="200" HeightRequest="200" 

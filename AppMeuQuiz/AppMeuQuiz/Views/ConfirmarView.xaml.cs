@@ -17,10 +17,10 @@ namespace AppMeuQuiz.Views
             InitializeComponent();
         }
 
-        public ConfirmarView(bool value_)
+        public ConfirmarView(bool value_,Produto produto_)
         {
             InitializeComponent();
-            this.BindingContext = new ViewModel.ConfirmarVM(value_);
+            this.BindingContext = new ViewModel.ConfirmarVM(value_, produto_);
         }
     }
 }

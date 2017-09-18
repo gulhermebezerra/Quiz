@@ -26,6 +26,14 @@ namespace AppMeuQuiz.ViewModel
         private bool _produtoC;
         private bool _produtoD;
         private Produto produto_;
+        private string _logoQuestao;
+
+        public string LogoQuestao
+        {
+            get { return _logoQuestao; }
+            set { _logoQuestao = value; OnPropertyChanged(); }
+        }
+
 
         private Color _questao1Color;
 
@@ -76,13 +84,21 @@ namespace AppMeuQuiz.ViewModel
         public MeuQuizVM(Produto produto_)
         {
             this.ProdutoA = produto_ == Produto.Filmarray;
-            this.ProdutoB = false;
-            this.ProdutoC = false;
-            this.ProdutoD = false;
+            LogoQuestao = produto_ == Produto.Filmarray ? "BotaologoFilmArray.png" : LogoQuestao;
+
+            this.ProdutoB = produto_ == Produto.Real;
+            LogoQuestao = produto_ == Produto.Real ? "BotaologoReal.png" : LogoQuestao;
+
+            this.ProdutoC = produto_ == Produto.Vidas;
+            LogoQuestao = produto_ == Produto.Real ? "BotaologoVidas.png" : LogoQuestao;
+
+            this.ProdutoD = produto_ == Produto.Virtuo;
+            LogoQuestao = produto_ == Produto.Real ? " BotaologoVirtuo.png" : LogoQuestao;
+
             this.produto_ = produto_;
 
             this.SelecionarQuestaoCMD = new Command((object obj) => this.SelecionarQuestao(obj));
-            this.ValidarQuestaoCMD = new Command(() => this.NavegarPara(new Views.ConfirmarView(EstaCerto)));
+            this.ValidarQuestaoCMD = new Command(() => this.NavegarPara(new Views.ConfirmarView(EstaCerto, produto_)));
         }
 
         public void SelecionarQuestao(object obj)

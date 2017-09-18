@@ -4,11 +4,7 @@
              x:Class="AppMeuQuiz.Views.ConfirmarView" BackgroundImage="{Binding Path=Imagem}">
     <ContentPage.Content>
         <StackLayout VerticalOptions="CenterAndExpand" HorizontalOptions="End" Margin="100">
-            <Label Text="Jogar Novamente" Font="25">
-                <Label.GestureRecognizers>
-                    <TapGestureRecognizer Command="{Binding JogarNovamente}"/>
-                </Label.GestureRecognizers>
-            </Label>
+            <Button Text="Jogar Novamente" FontSize="25" Command="{Binding JogarNovamenteCMD}"/>
         </StackLayout>
     </ContentPage.Content>
 </ContentPage>
