@@ -13,10 +13,10 @@
                 </Grid.ColumnDefinitions>
                 
                 <Image Source="bioLogo2014.png"  
-                       Grid.Column="0"  WidthRequest="500" HeightRequest="500" 
-                       VerticalOptions="Start" HorizontalOptions="End"/>
-                <Image Source="quiz_banner.png"  WidthRequest="200" HeightRequest="200" 
-                       Grid.Column="2" VerticalOptions="End"  HorizontalOptions="End"/>
+                       Grid.Column="0"
+                       VerticalOptions="Start" HorizontalOptions="Start"/>
+                <Image Source="quiz_banner.png"
+                       Grid.Column="2" VerticalOptions="Center"  HorizontalOptions="End"/>
             </Grid>
             
             <StackLayout>
