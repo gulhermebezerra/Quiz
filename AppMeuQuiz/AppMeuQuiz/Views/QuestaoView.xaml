@@ -9,18 +9,13 @@
                 <Grid.ColumnDefinitions>
                     <ColumnDefinition Width="200"/>
                     <ColumnDefinition Width="*"/>
-                    <ColumnDefinition Width="200"/>
                 </Grid.ColumnDefinitions>
                 
-                <Image Source="bioLogo2014.png"  
-                       Grid.Column="0"
-                       VerticalOptions="Start" HorizontalOptions="Start"/>
-                <Image Source="quiz_banner.png"
-                       Grid.Column="2" VerticalOptions="Center"  HorizontalOptions="End"/>
+                <Image Source="bioLogo2014.png" Grid.Column="0" VerticalOptions="Start" HorizontalOptions="Start"/>
             </Grid>
             
             <StackLayout>
-                <Label FontSize="32" HorizontalOptions="Center" VerticalOptions="Center">ESCOLHA O EQUIPAMENTO</Label>
+                <Label FontSize="45" HorizontalOptions="Center" VerticalOptions="Center">ESCOLHA O EQUIPAMENTO</Label>
             </StackLayout>
             
             <Grid ColumnSpacing="20" RowSpacing="20" Padding="10">
@@ -29,16 +24,16 @@
                     <ColumnDefinition Width="*"/>
                 </Grid.ColumnDefinitions>
                 <Grid.RowDefinitions>
-                    <RowDefinition Height="100"/>
-                    <RowDefinition Height="100"/>
+                    <RowDefinition Height="150"/>
+                    <RowDefinition Height="150"/>
                 </Grid.RowDefinitions>
 
-                <Image Grid.Column="0" Grid.Row="0" Source="BotaologoFilmArray.png">
+                <Image Grid.Column="0" Grid.Row="0" Source="BotaologoFilmArray.png" >
                     <Image.GestureRecognizers>
                         <TapGestureRecognizer Command="{Binding TelaProdutoQuestaoCMD}" CommandParameter="Filmarray"/>
                     </Image.GestureRecognizers>
                 </Image>
-                
+
                 <Image Grid.Column="1" Grid.Row="0" Source="BotaologoReal.png">
                     <Image.GestureRecognizers>
                         <TapGestureRecognizer Command="{Binding TelaProdutoQuestaoCMD}" CommandParameter="Real"/>
