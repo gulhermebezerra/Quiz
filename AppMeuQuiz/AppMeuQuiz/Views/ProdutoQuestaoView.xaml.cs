@@ -12,43 +12,11 @@ namespace AppMeuQuiz.Views
     [XamlCompilation(XamlCompilationOptions.Compile)]
     public partial class ProdutoQuestaoView : ContentPage
     {
-        private bool _produtoA;
-        private bool _produtoB;
-        private bool _produtoC;
-        private bool _produtoD;
 
-        public bool ProdutoA
-        {
-            get { return _produtoA; }
-            set { _produtoA = value; OnPropertyChanged(); }
-        }
-
-        public bool ProdutoB
-        {
-            get { return _produtoB; }
-            set { _produtoB = value; OnPropertyChanged(); }
-        }
-
-        public bool ProdutoC
-        {
-            get { return _produtoC; }
-            set { _produtoC = value; OnPropertyChanged(); }
-        }
-
-        public bool ProdutoD
-        {
-            get { return _produtoD; }
-            set { _produtoD = value; OnPropertyChanged(); }
-        }
 
         public ProdutoQuestaoView(Produto produto_)
         {
-            this.ProdutoA = produto_ == Produto.Filmarray;
-            this.ProdutoB = false;
-            this.ProdutoC = false;
-            this.ProdutoD = false;
-
-            this.BindingContext = new ViewModel.MeuQuizVM();
+            this.BindingContext = new ViewModel.MeuQuizVM(produto_);
             Initialize();
         }
 
@@ -59,6 +27,37 @@ namespace AppMeuQuiz.Views
         }
 
         private void TapGestureRecognizer_Tapped(object sender, EventArgs e)
+        {
+            
+        }
+
+        private void Button_Clicked(object sender, EventArgs e)
+        {
+            switch (((Button)sender).CommandParameter.ToString())
+            {
+                case "Q1":
+                    ((Button)sender).BackgroundColor = Color.LightGreen;
+                    var vm  = new ViewModel.MeuQuizVM();
+                    ((ViewModel.MeuQuizVM)this.BindingContext).EstaCerto = true;                    
+                    break;
+                case "Q2":
+                    ((Button)sender).BackgroundColor = Color.LightGreen;
+                    ((ViewModel.MeuQuizVM)this.BindingContext).EstaCerto = false;
+                    break;
+                case "Q3":
+                    ((Button)sender).BackgroundColor = Color.LightGreen;
+                    ((ViewModel.MeuQuizVM)this.BindingContext).EstaCerto = false;
+                    break;
+                case "Q4":
+                    ((Button)sender).BackgroundColor = Color.LightGreen;
+                    ((ViewModel.MeuQuizVM)this.BindingContext).EstaCerto = false;
+                    break;
+                default:
+                    break;
+            }
+        }
+
+        private void Q1_Unfocused(object sender, FocusEventArgs e)
         {
 
         }

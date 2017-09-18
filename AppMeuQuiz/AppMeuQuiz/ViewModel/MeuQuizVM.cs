@@ -19,10 +19,48 @@ namespace AppMeuQuiz.ViewModel
         {
             get { return _estaCerto; }
             set { _estaCerto = value; OnPropertyChanged(); }
-        }       
+        }
+
+        private bool _produtoA;
+        private bool _produtoB;
+        private bool _produtoC;
+        private bool _produtoD;
+        private Produto produto_;
+
+        private Color _questao1Color;
+
+        public Color Questao1Color
+        {
+            get { return _questao1Color; }
+            set { _questao1Color = value; OnPropertyChanged(); }
+        }
 
 
-        
+        public bool ProdutoA
+        {
+            get { return _produtoA; }
+            set { _produtoA = value; OnPropertyChanged(); }
+        }
+
+        public bool ProdutoB
+        {
+            get { return _produtoB; }
+            set { _produtoB = value; OnPropertyChanged(); }
+        }
+
+        public bool ProdutoC
+        {
+            get { return _produtoC; }
+            set { _produtoC = value; OnPropertyChanged(); }
+        }
+
+        public bool ProdutoD
+        {
+            get { return _produtoD; }
+            set { _produtoD = value; OnPropertyChanged(); }
+        }
+
+
         public Command TelaQuestoesCMD { get; set; }
         public Command TelaProdutoQuestaoCMD { get; set; }
         public Command ValidarQuestaoCMD { get; set; }
@@ -32,14 +70,24 @@ namespace AppMeuQuiz.ViewModel
         {
             this.TelaQuestoesCMD = new Command(() => this.NavegarPara(new Views.QuestaoView()));
             this.TelaProdutoQuestaoCMD = new Command((object produto_) => this.NavegarPara(new Views.ProdutoQuestaoView((Produto)Enum.Parse(typeof(Produto), produto_.ToString()))));
-            
-            this.SelecionarQuestaoCMD = new Command((object obj) => this.SelecionarQuestao(obj));
-            this.ValidarQuestaoCMD = new Command(() => this.NavegarPara(new Views.ConfirmarView(EstaCerto)));            
+                   
         }
 
-
-        private void SelecionarQuestao(object obj)
+        public MeuQuizVM(Produto produto_)
         {
+            this.ProdutoA = produto_ == Produto.Filmarray;
+            this.ProdutoB = false;
+            this.ProdutoC = false;
+            this.ProdutoD = false;
+            this.produto_ = produto_;
+
+            this.SelecionarQuestaoCMD = new Command((object obj) => this.SelecionarQuestao(obj));
+            this.ValidarQuestaoCMD = new Command(() => this.NavegarPara(new Views.ConfirmarView(EstaCerto)));
+        }
+
+        public void SelecionarQuestao(object obj)
+        {
+            this.Questao1Color = Color.Green;
             this.EstaCerto= bool.Parse(obj.ToString());
         }
 

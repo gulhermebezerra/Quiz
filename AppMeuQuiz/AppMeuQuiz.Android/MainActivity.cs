@@ -51,6 +51,12 @@ namespace AppMeuQuiz.Droid
 
             window.DecorView.SystemUiVisibility = StatusBarVisibility.Hidden;
         }
+
+        public override void OnBackPressed()
+        {
+
+            base.OnBackPressed();
+        }
     }
 }
 

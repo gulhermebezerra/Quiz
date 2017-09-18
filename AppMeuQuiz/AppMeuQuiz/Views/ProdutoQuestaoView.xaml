@@ -22,31 +22,36 @@
                         </StackLayout>
 
 
-                        <StackLayout Padding="20" Grid.Row="1" IsVisible="{Binding ProdutoA}" Orientation="Vertical" >
-                            <Label Text="FILMARRAY"/>
+                        <StackLayout Padding="20" Grid.Row="1" IsVisible="{Binding ProdutoA}" Orientation="Vertical" Spacing="10" >
 
-                            <Label Text="1.Quais os painéis existentes para o Sistema FilmArray?"/>
+                            <Label FontSize="26" FontAttributes="Bold" Text="1.Quais os painéis existentes para o Sistema FilmArray?"/>
 
-                            <Label Text="a. (Respiratório (RP); Identificação de Microrganismo em Hemocultura (BCID); Gastrointestinal (GI) e Meningite / Encefalite (ME) ">
-                                <Label.GestureRecognizers>
-                                    <TapGestureRecognizer Command="{Binding Path=SelecionarQuestaoCMD}" CommandParameter="True" Tapped="TapGestureRecognizer_Tapped" />
-                                </Label.GestureRecognizers>
-                            </Label>
-                            <Label Text="b. Respiratório (RP) e Identificação de Microrganismo em Hemocultura (BCID)">
-                                <Label.GestureRecognizers>
-                                    <TapGestureRecognizer Command="{Binding Path=SelecionarQuestaoCMD}" CommandParameter="False" />
-                                </Label.GestureRecognizers>
-                            </Label>
-                            <Label Text="c. Respiratório (RP) e Gastrointestinal (GI)">
-                                <Label.GestureRecognizers>
-                                    <TapGestureRecognizer Command="{Binding Path=SelecionarQuestaoCMD}" CommandParameter="False" />
-                                </Label.GestureRecognizers>
-                            </Label>
-                            <Label Text="d. Gastrointestinal (GI) e Meningite / Encefalite (ME)">
-                                <Label.GestureRecognizers>
-                                    <TapGestureRecognizer Command="{Binding Path=SelecionarQuestaoCMD}" CommandParameter="False" />
-                                </Label.GestureRecognizers>
-                            </Label>
+                            <Button x:Name="Q1" CommandParameter="Q1" Clicked="Button_Clicked" BackgroundColor="White" FontSize="20" Text="a. (Respiratório (RP); Identificação de Microrganismo em Hemocultura (BCID); Gastrointestinal (GI) e Meningite / Encefalite (ME) ">
+                                <Button.GestureRecognizers>
+                                    <TapGestureRecognizer
+                                        Command="{Binding Path=SelecionarQuestaoCMD}"   
+                                        CommandParameter="True"
+                                       />
+                                </Button.GestureRecognizers>
+                            </Button>
+
+                            <Button x:Name="Q2" CommandParameter="Q2"  Clicked="Button_Clicked" BackgroundColor="White" FontSize="20" Text="b. Respiratório (RP) e Identificação de Microrganismo em Hemocultura (BCID)">
+                                <Button.GestureRecognizers>
+                                    <TapGestureRecognizer Command="{Binding Path=SelecionarQuestaoCMD}" CommandParameter="False" Tapped="TapGestureRecognizer_Tapped" />
+                                </Button.GestureRecognizers>
+                            </Button>
+
+                            <Button x:Name="Q3" CommandParameter="Q3"  Clicked="Button_Clicked" BackgroundColor="White"  FontSize="20" Text="c. Respiratório (RP) e Gastrointestinal (GI)">
+                                <Button.GestureRecognizers>
+                                    <TapGestureRecognizer Command="{Binding Path=SelecionarQuestaoCMD}" CommandParameter="False" Tapped="TapGestureRecognizer_Tapped" />
+                                </Button.GestureRecognizers>
+                            </Button>
+
+                            <Button x:Name="Q4" CommandParameter="Q4"  Clicked="Button_Clicked" BackgroundColor="White" FontSize="20" Text="d. Gastrointestinal (GI) e Meningite / Encefalite (ME)" HorizontalOptions="FillAndExpand">
+                                <Button.GestureRecognizers>
+                                    <TapGestureRecognizer Command="{Binding Path=SelecionarQuestaoCMD}" CommandParameter="False" Tapped="TapGestureRecognizer_Tapped" />
+                                </Button.GestureRecognizers>
+                            </Button>
 
                         </StackLayout>
 
