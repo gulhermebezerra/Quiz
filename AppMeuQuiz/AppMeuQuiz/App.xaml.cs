@@ -38,7 +38,7 @@ namespace AppMeuQuiz
         Filmarray,
         Vidas,
         Virtuo,
-        Rio
+        Real
 
     }
 }
