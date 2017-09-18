@@ -6,32 +6,23 @@ using System.Threading.Tasks;
 
 namespace AppMeuQuiz.Model
 {
-    public class MeuQuiz : Base.ModelBase
-    {
-
-
-        private List<Questoes> _listaQuestoes;
-
-        public List<Questoes> ListaQuestoes
-        {
-            get { return _listaQuestoes; }
-            set { _listaQuestoes = value; OnPropertyChanged(); }
-        }       
-
-    }
-
     public class Questoes : Base.ModelBase
     {
-        private string _questao;
+        private string _questao;        
         private List<Resposta> _resposta;
+        private Produto _produto;
 
+        public Produto Produto
+        {
+            get { return _produto; }
+            set { _produto = value; OnPropertyChanged(); }
+        }
 
         public List<Resposta> Resposta
         {
             get { return _resposta; }
             set { _resposta = value; OnPropertyChanged(); }
         }
-
 
         public string Questao
         {

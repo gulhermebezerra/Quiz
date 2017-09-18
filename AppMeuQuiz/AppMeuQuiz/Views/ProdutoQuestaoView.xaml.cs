@@ -12,17 +12,42 @@ namespace AppMeuQuiz.Views
     [XamlCompilation(XamlCompilationOptions.Compile)]
     public partial class ProdutoQuestaoView : ContentPage
     {
-        private List<Model.Questoes> _lstPergunta;
+        private bool _produtoA;
+        private bool _produtoB;
+        private bool _produtoC;
+        private bool _produtoD;
 
-        public List<Model.Questoes> ListaPergunta
+        public bool ProdutoA
         {
-            get { return _lstPergunta; }
-            set { _lstPergunta = value; }
+            get { return _produtoA; }
+            set { _produtoA = value; OnPropertyChanged(); }
+        }
+
+        public bool ProdutoB
+        {
+            get { return _produtoB; }
+            set { _produtoB = value; OnPropertyChanged(); }
+        }
+
+        public bool ProdutoC
+        {
+            get { return _produtoC; }
+            set { _produtoC = value; OnPropertyChanged(); }
+        }
+
+        public bool ProdutoD
+        {
+            get { return _produtoD; }
+            set { _produtoD = value; OnPropertyChanged(); }
         }
 
         public ProdutoQuestaoView(Produto produto_)
         {
-            //Produto produto =(Produto) Enum.Parse(typeof(Produto), produto_.ToString());
+            this.ProdutoA = produto_ == Produto.Filmarray;
+            this.ProdutoB = false;
+            this.ProdutoC = false;
+            this.ProdutoD = false;
+
             this.BindingContext = new ViewModel.MeuQuizVM();
             Initialize();
         }
@@ -33,5 +58,9 @@ namespace AppMeuQuiz.Views
             
         }
 
+        private void TapGestureRecognizer_Tapped(object sender, EventArgs e)
+        {
+
+        }
     }
 }
