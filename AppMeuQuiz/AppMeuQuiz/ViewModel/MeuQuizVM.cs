@@ -12,10 +12,10 @@ namespace AppMeuQuiz.ViewModel
 
         private List<Model.Questoes> _meuQuiz;
         private Model.Questoes _quiz;
-        private bool _estaCerto;
+        private bool? _estaCerto;
 
 
-        public bool EstaCerto
+        public bool? EstaCerto
         {
             get { return _estaCerto; }
             set { _estaCerto = value; OnPropertyChanged(); }
@@ -98,7 +98,19 @@ namespace AppMeuQuiz.ViewModel
             this.produto_ = produto_;
 
             this.SelecionarQuestaoCMD = new Command((object obj) => this.SelecionarQuestao(obj));
-            this.ValidarQuestaoCMD = new Command(() => this.NavegarPara(new Views.ConfirmarView(EstaCerto, produto_)));
+            this.ValidarQuestaoCMD = new Command(() => ValidarQuestao());
+        }
+
+        private void ValidarQuestao()
+        {
+            if (EstaCerto != null) {
+                this.NavegarPara(new Views.ConfirmarView(EstaCerto.Value, produto_));
+            }
+            else
+            {
+                var toast = DependencyService.Get<IToastMessage>();
+                toast.LongAlert("Selecione uma Pergunta");
+            }
         }
 
         public void SelecionarQuestao(object obj)
