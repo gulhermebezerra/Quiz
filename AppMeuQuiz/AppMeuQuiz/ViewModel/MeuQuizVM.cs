@@ -109,7 +109,7 @@ namespace AppMeuQuiz.ViewModel
             else
             {
                 var toast = DependencyService.Get<IToastMessage>();
-                toast.LongAlert("Selecione uma Pergunta");
+                toast.LongAlert("Selecione uma resposta!");
             }
         }
 
