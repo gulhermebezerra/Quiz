@@ -5,12 +5,12 @@
     <ContentPage.Content>
         <StackLayout Padding="10" HorizontalOptions="StartAndExpand">
 
-            <StackLayout HeightRequest="200">
+            <StackLayout HeightRequest="150">
                 <Label FontSize="45" 
-                       HorizontalOptions="CenterAndExpand" VerticalOptions="CenterAndExpand">ESCOLHA O EQUIPAMENTO</Label>
+                       HorizontalOptions="CenterAndExpand" VerticalOptions="CenterAndExpand"/>
             </StackLayout>
             
-            <Grid ColumnSpacing="20" RowSpacing="20" Padding="10">
+            <Grid ColumnSpacing="40" RowSpacing="40" Padding="10">
                 <Grid.ColumnDefinitions>
                     <ColumnDefinition Width="*"/>
                     <ColumnDefinition Width="*"/>
@@ -20,25 +20,25 @@
                     <RowDefinition Height="150"/>
                 </Grid.RowDefinitions>
 
-                <Image Grid.Column="0" Grid.Row="0" Source="BotaologoFilmArray.png" >
+                <Image Grid.Column="0" Grid.Row="0" Source="BotaologoFilmArray.png" HorizontalOptions="End"  >
                     <Image.GestureRecognizers>
                         <TapGestureRecognizer Command="{Binding TelaProdutoQuestaoCMD}" CommandParameter="Filmarray"/>
                     </Image.GestureRecognizers>
                 </Image>
 
-                <Image Grid.Column="1" Grid.Row="0" Source="BotaologoReal.png">
+                <Image Grid.Column="1" Grid.Row="0" Source="BotaologoReal.png" HorizontalOptions="Start">
                     <Image.GestureRecognizers>
                         <TapGestureRecognizer Command="{Binding TelaProdutoQuestaoCMD}" CommandParameter="Real"/>
                     </Image.GestureRecognizers>
                 </Image>
-                
-                <Image Grid.Column="0" Grid.Row="1" Source="BotaologoVidas.png">
+
+                <Image Grid.Column="0" Grid.Row="1" Source="BotaologoVidas.png" HorizontalOptions="End">
                     <Image.GestureRecognizers>
                         <TapGestureRecognizer Command="{Binding TelaProdutoQuestaoCMD}" CommandParameter="Vidas"/>
                     </Image.GestureRecognizers>
                 </Image>
 
-                <Image Grid.Column="1" Grid.Row="1" Source="BotaologoVirtuo.png">
+                <Image Grid.Column="1" Grid.Row="1" Source="BotaologoVirtuo.png" HorizontalOptions="Start">
                     <Image.GestureRecognizers>
                         <TapGestureRecognizer Command="{Binding TelaProdutoQuestaoCMD}" CommandParameter="Virtuo"/>
                     </Image.GestureRecognizers>
