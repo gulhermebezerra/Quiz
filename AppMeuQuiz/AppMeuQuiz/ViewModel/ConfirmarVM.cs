@@ -25,7 +25,7 @@ namespace AppMeuQuiz.ViewModel
 
         private void Selecionar(Produto p)
         {
-            this.NavegarPara(new Views.QuestaoView());
+            this.NavegarPara(new MainPage());
         }
 
         public ConfirmarVM(bool value, Produto p)

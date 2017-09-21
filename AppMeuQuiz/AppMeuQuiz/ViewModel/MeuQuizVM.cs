@@ -84,16 +84,16 @@ namespace AppMeuQuiz.ViewModel
         public MeuQuizVM(Produto produto_)
         {
             this.ProdutoA = produto_ == Produto.Filmarray;
-            LogoQuestao = produto_ == Produto.Filmarray ? "BotaologoFilmArray.png" : LogoQuestao;
+            LogoQuestao = produto_ == Produto.Filmarray ? "layout_Film.jpg" : LogoQuestao;
 
             this.ProdutoB = produto_ == Produto.Real;
-            LogoQuestao = produto_ == Produto.Real ? "BotaologoReal.png" : LogoQuestao;
+            LogoQuestao = produto_ == Produto.Real ? "layout_Real.jpg" : LogoQuestao;
 
             this.ProdutoC = produto_ == Produto.Vidas;
-            LogoQuestao = produto_ == Produto.Vidas ? "BotaologoVidas.png" : LogoQuestao;
+            LogoQuestao = produto_ == Produto.Vidas ? "layout_Vidas.jpg" : LogoQuestao;
 
             this.ProdutoD = produto_ == Produto.Virtuo;
-            LogoQuestao = produto_ == Produto.Virtuo ? "BotaologoVirtuo.png" : LogoQuestao;
+            LogoQuestao = produto_ == Produto.Virtuo ? "layout_Virtuo.jpg" : LogoQuestao;
 
             this.produto_ = produto_;
 

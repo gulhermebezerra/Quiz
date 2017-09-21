@@ -1,21 +1,13 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
-             x:Class="AppMeuQuiz.Views.QuestaoView">
+             x:Class="AppMeuQuiz.Views.QuestaoView" BackgroundImage="Escolha_Equipamento.jpg">
     <ContentPage.Content>
         <StackLayout Padding="10" HorizontalOptions="StartAndExpand">
-            
-            <Grid>
-                <Grid.ColumnDefinitions>
-                    <ColumnDefinition Width="200"/>
-                    <ColumnDefinition Width="*"/>
-                </Grid.ColumnDefinitions>
-                
-                <Image Source="bioLogo2014.png" Grid.Column="0" VerticalOptions="Start" HorizontalOptions="Start"/>
-            </Grid>
-            
-            <StackLayout>
-                <Label FontSize="45" HorizontalOptions="Center" VerticalOptions="Center">ESCOLHA O EQUIPAMENTO</Label>
+
+            <StackLayout HeightRequest="200">
+                <Label FontSize="45" 
+                       HorizontalOptions="CenterAndExpand" VerticalOptions="CenterAndExpand">ESCOLHA O EQUIPAMENTO</Label>
             </StackLayout>
             
             <Grid ColumnSpacing="20" RowSpacing="20" Padding="10">
