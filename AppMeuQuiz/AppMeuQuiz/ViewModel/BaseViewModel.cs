@@ -20,7 +20,7 @@ namespace AppMeuQuiz.ViewModel.Base
 
         protected void NavegarPara(Page Tela)
         {
-            Task.Run(()=> Xamarin.Forms.Application.Current.MainPage.Navigation.PushAsync(Tela, true));
+            Xamarin.Forms.Application.Current.MainPage.Navigation.PushAsync(Tela, true);
             NavigationPage.SetHasNavigationBar(Tela, false);
         }
 

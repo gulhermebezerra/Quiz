@@ -77,7 +77,7 @@ namespace AppMeuQuiz.ViewModel
         public MeuQuizVM()
         {
             this.TelaQuestoesCMD = new Command(() => this.NavegarPara(new Views.QuestaoView()));
-            this.TelaProdutoQuestaoCMD = new Command((object produto_) => this.NavegarPara(new Views.ProdutoQuestaoViewA((Produto)Enum.Parse(typeof(Produto), produto_.ToString()))));
+            this.TelaProdutoQuestaoCMD = new Command((object produto_) => this.NavegarPara(new Views.ProdutoQuestaoView((Produto)Enum.Parse(typeof(Produto), produto_.ToString()))));
                    
         }
 
