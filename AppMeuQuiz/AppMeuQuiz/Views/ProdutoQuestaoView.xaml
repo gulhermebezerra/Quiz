@@ -17,7 +17,7 @@
                             <RowDefinition Height="*"/>
                         </Grid.RowDefinitions>
 
-                        <StackLayout Grid.Row="0" Padding="40">
+                        <StackLayout Grid.Row="0" Padding="20">
                             <Label FontSize="26" IsVisible="{Binding ProdutoA}" FontAttributes="Bold" Text="1.Quais os painéis existentes para o Sistema FilmArray?"/>
                             <Label FontSize="26" IsVisible="{Binding ProdutoB}" Text="Quando pensamos em redução de tempo na cadeia de comunicação entre o laboratório e o ambiente hospitalar, onde encontramos mais oportunidades de compressão nos tempos existentes, dentro da cadeia de produção de exames ou na cadeia de distribuição da informação aos médicos prescriptores?"/>
                             <Label FontSize="26" IsVisible="{Binding ProdutoC}" Text="Qual o nome do único teste automatizado aprovado pelo FDA e ANVISA para auxiliar os médicos no uso racional de antibióticos nas infecções do trato respiratório inferior (ITRI) e sepse? "/>

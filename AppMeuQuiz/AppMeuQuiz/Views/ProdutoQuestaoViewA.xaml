@@ -17,7 +17,7 @@
                             <RowDefinition Height="*"/>
                         </Grid.RowDefinitions>
 
-                        <StackLayout Grid.Row="0" Padding="40">
+                        <StackLayout Grid.Row="0" Padding="20">
                             <Label FontSize="26" IsVisible="{Binding ProdutoA}" FontAttributes="Bold" Text="Em quanto tempo o Sistema FilmArray® libera o resultado para o paciente, após a detecção e identificação de microrganismos patogênicos?"/>
                             <Label FontSize="26" IsVisible="{Binding ProdutoB}" Text="O que define um exame laboratorial de microbiologia oportuno?"/>
                             <Label FontSize="26" IsVisible="{Binding ProdutoC}" Text="Qual é o nome do teste utilizado para auxiliar a evolução de risco de sepse e choque séptico desde o primeiro dia após a admissão na unidade de terapia intensiva (UTI)?"/>
