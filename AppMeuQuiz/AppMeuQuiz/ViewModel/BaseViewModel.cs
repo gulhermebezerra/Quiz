@@ -18,9 +18,9 @@ namespace AppMeuQuiz.ViewModel.Base
             PropertyChanged?.Invoke(this, new PropertyChangedEventArgs(propertyName));
         }
 
-        protected async void NavegarPara(Page Tela)
+        protected void NavegarPara(Page Tela)
         {
-            await Xamarin.Forms.Application.Current.MainPage.Navigation.PushAsync(Tela, true);
+            Task.Run(()=> Xamarin.Forms.Application.Current.MainPage.Navigation.PushAsync(Tela, true));
             NavigationPage.SetHasNavigationBar(Tela, false);
         }
 
