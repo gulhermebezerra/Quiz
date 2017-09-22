@@ -12,7 +12,7 @@ namespace AppMeuQuiz
         public App()
         {
             InitializeComponent();           
-            MainPage = new NavigationPage(new AppMeuQuiz.MainPage());            
+            MainPage = new NavigationPage(AppMeuQuiz.MainPage.Instance);            
         }
 
         protected override void OnStart()

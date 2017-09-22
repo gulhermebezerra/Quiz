@@ -10,7 +10,7 @@
                    Command="{Binding TelaQuestoesCMD}"
                    />
             </StackLayout.GestureRecognizers>
-            <Image Source="quiz_tela_inicio.png"                                       
+            <Image Source="quiz_tela_inicio.png"                                        
                    HorizontalOptions="Fill" 
                    VerticalOptions="Fill"/>
         </StackLayout>

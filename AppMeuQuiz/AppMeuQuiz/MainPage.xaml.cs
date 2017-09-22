@@ -9,13 +9,20 @@ namespace AppMeuQuiz
 {
     public partial class MainPage : ContentPage
     {
-        public MainPage()
+        static readonly MainPage _instance = new MainPage();
+        public static MainPage Instance
+        {
+            get
+            {
+                return _instance;
+            }
+        }
+        private MainPage()
         {
             InitializeComponent();
             this.BindingContext = new ViewModel.MeuQuizVM();
             NavigationPage.SetHasNavigationBar(this, false);
 
         }
-      
     }
 }

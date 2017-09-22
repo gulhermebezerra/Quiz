@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Android.Util;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -25,7 +26,16 @@ namespace AppMeuQuiz.ViewModel
 
         private void Selecionar(Produto p)
         {
-            this.NavegarPara(new MainPage());
+            try
+            {
+                Xamarin.Forms.Application.Current.MainPage = new NavigationPage(MainPage.Instance);
+                //this.NavegarPara(MainPage.Instance);
+            }
+            catch (Exception ex)
+            {
+                Log.Debug("Selecionar >>> ", ex.StackTrace);
+            }
+          
         }
 
         public ConfirmarVM(bool value, Produto p)

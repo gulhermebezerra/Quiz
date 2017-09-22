@@ -7,22 +7,53 @@ using Android.Views;
 using Android.Widget;
 using Android.OS;
 using Xamarin.Forms;
+using System.Threading.Tasks;
+using Android.Util;
 
 namespace AppMeuQuiz.Droid
 {
-    [Activity(Label = "Quiz", Icon = "@drawable/icon", Theme = "@style/MainTheme", MainLauncher = true, ConfigurationChanges = ConfigChanges.ScreenSize | ConfigChanges.Orientation)]
+    [Activity(Label = "Quiz 2", Icon = "@drawable/icon", Theme = "@style/MainTheme", MainLauncher = true, ConfigurationChanges = ConfigChanges.ScreenSize | ConfigChanges.Orientation)]
     public class MainActivity : global::Xamarin.Forms.Platform.Android.FormsApplicationActivity
     {
         protected override void OnCreate(Bundle bundle)
         {
             //TabLayoutResource = Resource.Layout.Tabbar;
             //ToolbarResource = Resource.Layout.Toolbar;
+            try
+            {
+                base.OnCreate(bundle);
 
-            base.OnCreate(bundle);
+                global::Xamarin.Forms.Forms.Init(this, bundle);
+                LoadApplication(new App());
 
-            global::Xamarin.Forms.Forms.Init(this, bundle);
-            LoadApplication(new App());
-            HideStatusBar();
+                AppDomain.CurrentDomain.UnhandledException += CurrentDomainOnUnhandledException;
+
+                TaskScheduler.UnobservedTaskException += TaskSchedulerOnUnobservedTaskException;
+
+                AndroidEnvironment.UnhandledExceptionRaiser += AndroidEnvironmentOnUnhandledException;
+            }
+            catch (Exception ex)
+            {
+                Log.Debug("Erro Inesperado", ex.Message);
+               
+            }
+           
+            //HideStatusBar();
+        }
+
+        private void AndroidEnvironmentOnUnhandledException(object sender, RaiseThrowableEventArgs e)
+        {
+            Log.Debug("AndroidEnvironmentOnUnhandledException >>>", e.Exception.Message);
+        }
+
+        private void TaskSchedulerOnUnobservedTaskException(object sender, UnobservedTaskExceptionEventArgs e)
+        {
+            Log.Debug("TaskSchedulerOnUnobservedTaskException >>>", e.Exception.Message);
+        }
+
+        private void CurrentDomainOnUnhandledException(object sender, UnhandledExceptionEventArgs e)
+        {
+            Log.Debug("CurrentDomainOnUnhandledException >>> ", e.ToString());
         }
 
         // Call this method from the constructor after InitializeComponent ();
